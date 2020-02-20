@@ -1,0 +1,18 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Weather forecast</h1>
+    <button id="getDataButton">Get data</button>
+    @*<p>Access token: @Model.AccessToken</p>*@
+</div>
+
+@section Scripts {
+    <script type="text/javascript" >
+        var accessToken = '@Model.AccessToken';
+    </script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+}
